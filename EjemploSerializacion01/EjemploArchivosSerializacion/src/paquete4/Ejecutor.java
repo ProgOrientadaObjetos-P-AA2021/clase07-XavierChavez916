@@ -19,18 +19,18 @@ public class Ejecutor {
         Hospital h2 = new Hospital("Hospital Clínica San Agustín", 12, 123.123);
         Hospital h3 = new Hospital("Clínica Hospital San José", 14, 1223.12);
 
-        Hospital[] lista = {h1, h2, h3};
-
+ 
         EscrituraArchivoSecuencial archivo = new EscrituraArchivoSecuencial
         (nombreArchivo);
-
-        for (int i = 0; i < lista.length; i++) {
-            archivo.establecerRegistro(lista[i]);
-
-            archivo.establecerSalida();
-        }
-
+        
+        archivo.establecerRegistro(h1);
+        archivo.establecerSalida();
+        archivo.establecerRegistro(h2);
+        archivo.establecerSalida();
+        archivo.establecerRegistro(h3);
+        archivo.establecerSalida();
         archivo.cerrarArchivo();
+        
 
         LecturaArchivoSecuencial lectura = new LecturaArchivoSecuencial
         (nombreArchivo);
